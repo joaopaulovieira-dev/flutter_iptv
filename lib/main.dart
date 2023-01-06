@@ -19,17 +19,12 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: fullscreen == false
             ? AppBar(
-                backgroundColor: Colors.blue,
-                title: const Icon(Icons.play_arrow),
+                backgroundColor: Colors.black,
+                title: const Text('TV Online'),
                 centerTitle: true,
-                leading: IconButton(
-                  icon: const Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
               )
             : null,
         body: Padding(
@@ -82,7 +77,7 @@ class _MyAppState extends State<MyApp> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: const [
                     SizedBox(height: 16.0),
-                    Text("Loading video..."),
+                    Text("Carregando canal"),
                   ],
                 ),
               ),
