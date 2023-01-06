@@ -11,9 +11,18 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black),
-      ),
+      //darkmode
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData.dark(),
+      //lightmode
+      // themeMode: ThemeMode.light,
+      // theme: ThemeData.light(),
+      //custom
+      // themeMode: ThemeMode.system,
+
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black),
+      // ),
       title: 'Pads Ambiente',
       initialRoute: '/splash',
       routes: {

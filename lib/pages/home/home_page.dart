@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('TV Online'),
-        backgroundColor: Colors.black,
+        //backgroundColor: Colors.black,
       ),
       body: FutureBuilder<List<ChannelModel>>(
         future: fetchChannel(),
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
           }
           return const Center(
             child: CircularProgressIndicator(
-              color: Colors.black,
+              color: Colors.white,
             ),
           );
         },
