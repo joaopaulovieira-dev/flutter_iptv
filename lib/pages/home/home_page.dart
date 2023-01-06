@@ -54,8 +54,9 @@ class _HomePageState extends State<HomePage> {
               },
             );
           } else if (snapshot.hasError) {
-            return const Center(
-              child: Text('Erro ao carregar os canais'),
+            return Center(
+              //mostra o codigo do erro
+              child: Text('Error: ${snapshot.error}'),
             );
           }
           return const Center(

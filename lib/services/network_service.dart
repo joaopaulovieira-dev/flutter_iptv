@@ -5,8 +5,8 @@ import 'package:flutter_iptv/models/channel_model.dart';
 import 'package:http/http.dart' as http;
 
 Future<List<ChannelModel>> fetchChannel() async {
-  final response = await http
-      .get(Uri.parse('https://tvonline.joaopaulovieira.dev/channel.json'));
+  final response = await http.get(Uri.parse(
+      'https://joaopaulovieira.me/flutter_iptv.github.io/others/channel.json'));
 
   if (response.statusCode == 200) {
     return compute(parseChannel, response.body);
