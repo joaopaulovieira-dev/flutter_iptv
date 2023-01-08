@@ -1,6 +1,5 @@
-//homePage.dart
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_iptv/models/channel_model.dart';
 import 'package:flutter_iptv/services/network_service.dart';
 import 'package:flutter_iptv/shared/widgets/player_widget.dart';
@@ -19,6 +18,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
     return Scaffold(
       appBar: AppBar(
         title: const Text('TV Online'),
@@ -33,12 +36,13 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(snapshot.data![index].name),
-                  leading: Image.network(
+                  leading: //caso a imagem retorne erro, mostra o icone
+                      Image.network(
+                    snapshot.data![index].urlLogo,
                     width: 50,
                     height: 50,
-                    snapshot.data![index].urlLogo,
                     errorBuilder: (context, error, stackTrace) {
-                      return const Icon(Icons.error);
+                      return const Center(child: Icon(Icons.error));
                     },
                   ),
                   onTap: () {

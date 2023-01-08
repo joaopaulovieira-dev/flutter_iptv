@@ -20,6 +20,11 @@ class SplashPage extends StatelessWidget {
       systemNavigationBarDividerColor: Colors.transparent,
     )); //Cor do status bar
 
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+
     return Scaffold(
       backgroundColor: AppTheme.colors.background,
       body: Stack(
@@ -42,13 +47,13 @@ class SplashPage extends StatelessWidget {
                   children: [
                     Text(
                       "TV Online",
-                      style: AppTheme.textStyles.titleSplashPage,
                       textAlign: TextAlign.left,
+                      style: AppTheme.textStyles.titleSplashPage,
                     ),
                     Text(
-                      "Assista a canais Ao Vivo.",
-                      style: AppTheme.textStyles.subTitleSplashPage,
+                      "Assista a vários canais de TV",
                       textAlign: TextAlign.left,
+                      style: AppTheme.textStyles.subTitleSplashPage,
                     ),
                   ],
                 ),

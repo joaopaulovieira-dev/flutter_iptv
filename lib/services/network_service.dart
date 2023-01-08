@@ -1,12 +1,12 @@
-import 'dart:async';
 import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_iptv/models/channel_model.dart';
 import 'package:http/http.dart' as http;
 
 Future<List<ChannelModel>> fetchChannel() async {
-  final response = await http.get(Uri.parse(
-      'https://joaopaulovieira.me/flutter_iptv.github.io/others/channel.json'));
+  final response = await http
+      .get(Uri.parse('http://tvonline.joaopaulovieira.dev/channel.json'));
 
   if (response.statusCode == 200) {
     return compute(parseChannel, response.body);

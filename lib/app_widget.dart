@@ -5,7 +5,7 @@ import 'package:flutter_iptv/pages/home/home_page.dart';
 import 'package:flutter_iptv/pages/splash/splash_page.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({super.key});
+  const AppWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
