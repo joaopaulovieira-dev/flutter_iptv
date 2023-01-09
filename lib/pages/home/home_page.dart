@@ -42,7 +42,9 @@ class _HomePageState extends State<HomePage> {
                     width: 50,
                     height: 50,
                     errorBuilder: (context, error, stackTrace) {
-                      return const Center(child: Icon(Icons.error));
+                      return Image.asset(
+                        "assets/images/semImagem.jpg",
+                      );
                     },
                   ),
                   onTap: () {

@@ -44,16 +44,18 @@ class SplashPage extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "TV Online",
-                      textAlign: TextAlign.left,
-                      style: AppTheme.textStyles.titleSplashPage,
-                    ),
+                  children: const [
+                    Text("TV Online",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        )),
                     Text(
                       "Assista a vários canais de TV",
                       textAlign: TextAlign.left,
-                      style: AppTheme.textStyles.subTitleSplashPage,
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
                     ),
                   ],
                 ),
